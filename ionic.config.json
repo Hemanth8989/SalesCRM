@@ -1,0 +1,7 @@
+{
+  "name": "InvoiceBill",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
