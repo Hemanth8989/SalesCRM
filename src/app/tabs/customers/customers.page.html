@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Customers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Iterate over the customer list -->
+    <ion-item *ngFor="let customer of customers" (click)="viewCustomer(customer)">
+      <ion-label>
+        <h2>{{ customer.name }}</h2>
+        <p>ID:{{ customer.id }}</p>
+        <p>Address: {{ customer.address }}</p>
+        <p>No. of Invoices: {{ customer.invoices }}</p>
+      </ion-label>
+      <ion-icon name="arrow-forward-circle" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="addCustomer()">
+    <ion-icon name="person-add-outline" color="white"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
